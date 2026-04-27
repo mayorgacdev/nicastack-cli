@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+
+    <PackageId>NicaStack.Cli</PackageId>
+    <VersionPrefix>0.1.0</VersionPrefix>
+    <Authors>NicaStack Community</Authors>
+    <Company>NicaStack</Company>
+    <Description>CLI para generar proyectos base .NET con templates de arquitectura y modo interactivo.</Description>
+    <PackageTags>dotnet-tool;cli;architecture;clean-architecture;vertical-slice;scaffolding</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageReleaseNotes>Primera base publica del CLI con comandos create, list, wizard, doctor y version.</PackageReleaseNotes>
+    <PackAsTool>true</PackAsTool>
+    <ToolCommandName>nicastack</ToolCommandName>
+    <PackageOutputPath>./nupkg</PackageOutputPath>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Spectre.Console" Version="0.49.1" />
+    <PackageReference Include="Spectre.Console.Cli" Version="0.49.1" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="10.0.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\docs\README.md" Pack="true" PackagePath="\" Link="README.md" />
+  </ItemGroup>
+
+</Project>
